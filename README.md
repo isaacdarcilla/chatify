@@ -28,4 +28,4 @@ yarn redwood dev
 
 > **Themes**
 
-Thanks to [Tom](https://tomve.gumroad.com/) for creating beautiful landing page. 🚀
+Thanks to [Tom](https://tomve.gumroad.com/) for creating this beautiful landing page. 🚀
