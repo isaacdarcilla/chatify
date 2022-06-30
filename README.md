@@ -21,3 +21,7 @@ Then change into that directory and start the development server:
 cd chatify
 yarn redwood dev
 ```
+
+> **Author**
+
+[Isaac Arcilla](https://facebook.com/isaacdarcilla)
