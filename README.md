@@ -25,3 +25,7 @@ yarn redwood dev
 > **Author**
 
 [Isaac Arcilla](https://facebook.com/isaacdarcilla)
+
+> **Themes**
+
+Thanks to [Tom](https://tomve.gumroad.com/) for creating beautiful landing page. 🚀
