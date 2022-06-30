@@ -4,10 +4,10 @@ import HomeLayout from './layouts/HomeLayout/HomeLayout'
 const Routes = () => {
   return (
     <Router>
-       <Set wrap={HomeLayout}>
-      <Route path="/privacy" page={PrivacyPage} name="privacy" />
-      <Route path="/about" page={AboutPage} name="about" />
-      <Route path="/" page={HomePage} name="home" />
+      <Set wrap={HomeLayout}>
+        <Route path="/privacy" page={PrivacyPage} name="privacy" />
+        <Route path="/about" page={AboutPage} name="about" />
+        <Route path="/" page={HomePage} name="home" />
       </Set>
       <Route notfound page={NotFoundPage} />
     </Router>

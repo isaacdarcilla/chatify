@@ -1,11 +1,19 @@
 import { MetaTags } from '@redwoodjs/web'
+import { Form, Submit, TextField } from '@redwoodjs/forms'
 import 'dist/landing/styles.css'
 import 'dist/landing/script.js'
 
 const HomePage = () => {
+  const onSubmit = (data) => {
+    console.log(data)
+  }
+
   return (
     <>
-      <MetaTags title="Chatify — Chat with friends." description="Chat anonymously." />
+      <MetaTags
+        title="Chatify — Chat with friends."
+        description="Chat anonymously."
+      />
 
       <section class="pt-24 md:mt-0 md:h-screen flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:px-12 px-4 bg-secondary">
         <div class="md:flex-1 md:mr-10">
@@ -20,15 +28,16 @@ const HomePage = () => {
             join. Have fun chatting anonymously.
           </p>
           <div class="font-pt-serif">
-            <form class="flex">
-              <input
+            <Form onSubmit={onSubmit} class="flex">
+              <TextField
+                name="room"
                 class="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
                 placeholder="New room name..."
               />
-              <button class="px-8 rounded-r-lg bg-yellow-400  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r">
+              <Submit class="px-8 rounded-r-lg bg-yellow-400  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b border-r">
                 Create Room
-              </button>
-            </form>
+              </Submit>
+            </Form>
           </div>
         </div>
         <div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
@@ -89,7 +98,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
     </>
   )
 }
