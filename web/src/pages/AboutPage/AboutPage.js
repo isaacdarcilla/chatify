@@ -1,5 +1,7 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
+import 'dist/landing/styles.css'
+import 'dist/landing/script.js'
 
 const AboutPage = () => {
   return (
