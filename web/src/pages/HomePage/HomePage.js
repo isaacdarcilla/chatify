@@ -1,7 +1,9 @@
 import { Form, Submit, TextField } from '@redwoodjs/forms'
 import { MetaTags, useMutation } from '@redwoodjs/web'
+
 import 'dist/landing/styles.css'
 import 'dist/landing/script.js'
+import { Slug, code } from 'src/helper/Helpers'
 
 const CREATE_ROOM = gql`
   mutation CreateRoomMutation($input: CreateRoomInput!) {
@@ -11,6 +13,9 @@ const CREATE_ROOM = gql`
   }
 `
 
+// eslint-disable-next-line no-undef
+const slug = new Slug()
+
 const HomePage = () => {
   const [create, { loading }] = useMutation(CREATE_ROOM)
 
@@ -19,23 +24,15 @@ const HomePage = () => {
       variables: {
         input: {
           roomName: data.roomName,
-          code: (Math.random() + 1).toString(36).substring(7),
-          slug: `${slugify(data.roomName)}-${(
-            0 |
-            (Math.random() * 9e6)
-          ).toString(36)}`,
+          code: code(),
+          slug: slug.slugify(data.roomName).random().string,
         },
       },
     }).then((r) => console.log(r))
+    // Redirect to Message after creating
   }
 
-  const slugify = (str) =>
-    str
-      .toLowerCase()
-      .trim()
-      .replace(/[^\w\s-]/g, '')
-      .replace(/[\s_-]+/g, '-')
-      .replace(/^-+|-+$/g, '')
+  // TODO: Message UI
 
   return (
     <>

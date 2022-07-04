@@ -7,7 +7,7 @@ const PrivacyPage = () => {
     <>
       <MetaTags title="Chatify — Privacy" description="Chat anonymously." />
 
-      <section className="pt-24 md:mt-0 text-justify md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:px-12 px-4 bg-secondary">
+      <section className="text-justify font-pt-serif font-normal pt-24 md:mt-0 text-justify md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:px-12 px-4 bg-secondary">
         <h1 className="font-bold my-3">Privacy Policy for Chatify</h1>
 
         <p>
