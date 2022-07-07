@@ -2,7 +2,7 @@
 
 Create your first Room. Share the link with the code so others can join. Have fun chatting anonymously. 💛
 
-![image](https://user-images.githubusercontent.com/22732118/176568569-ffe35f91-f4b9-4292-91f1-fc705f7923ac.png) 
+![image](https://user-images.githubusercontent.com/22732118/176568569-ffe35f91-f4b9-4292-91f1-fc705f7923ac.png)
 
 > **Prerequisites**
 >
@@ -19,7 +19,7 @@ Then change into that directory and start the development server:
 
 ```
 cd chatify
-yarn redwood dev
+yarn rw dev
 ```
 
 > **Author**
